@@ -1,8 +1,6 @@
-package com.luv2code.cruddemo.rest;
-import com.luv2code.cruddemo.repository.StudentRepository;
-import com.luv2code.cruddemo.service.StudentService;
-import com.luv2code.cruddemo.dao.StudentDAO;
-import com.luv2code.cruddemo.entity.Student;
+package cruddemo.rest;
+import cruddemo.service.StudentService;
+import cruddemo.entity.Student;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 public class StudentController {

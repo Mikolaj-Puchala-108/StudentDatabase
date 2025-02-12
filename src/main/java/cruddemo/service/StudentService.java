@@ -1,10 +1,9 @@
-package com.luv2code.cruddemo.service;
-import com.luv2code.cruddemo.dao.StudentDAOimp;
-import com.luv2code.cruddemo.entity.Student;
+package cruddemo.service;
+import cruddemo.entity.Student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.luv2code.cruddemo.repository.StudentRepository;
+import cruddemo.repository.StudentRepository;
 import java.util.List;
 import java.util.Optional;
 

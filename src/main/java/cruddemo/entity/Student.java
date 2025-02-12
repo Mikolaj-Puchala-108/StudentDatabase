@@ -1,4 +1,4 @@
-package com.luv2code.cruddemo.entity;
+package cruddemo.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

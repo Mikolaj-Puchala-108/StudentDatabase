@@ -1,15 +1,9 @@
-package com.luv2code.cruddemo;
+package cruddemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.luv2code.cruddemo.dao.StudentDAO;
-import com.luv2code.cruddemo.dao.StudentDAOimp;
-import com.luv2code.cruddemo.entity.Student;
+import cruddemo.dao.StudentDAO;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.util.List;
 
 @SpringBootApplication(scanBasePackages = "com.luv2code.cruddemo")
 public class CruddemoApplication {

@@ -1,6 +1,6 @@
-package com.luv2code.cruddemo.dao;
+package cruddemo.dao;
 
-import com.luv2code.cruddemo.entity.Student;
+import cruddemo.entity.Student;
 
 import java.util.List;
 

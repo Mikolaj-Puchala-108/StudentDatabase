@@ -1,7 +1,7 @@
-package com.luv2code.cruddemo.rest;
+package cruddemo.rest;
 
-import com.luv2code.cruddemo.entity.Student;
-import com.luv2code.cruddemo.service.StudentService;
+import cruddemo.entity.Student;
+import cruddemo.service.StudentService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
