@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Menu</title>
+</head>
+
+<style>
+    .form-container {
+        max-width: 400px;
+        margin: auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    .save-button {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .cancel-button {
+        background-color: #f44336;
+        color: white;
+    }
+</style>
+<body>
+<h1>Menu</h1>
+<button onclick="window.location.href='/students'">Zobacz bazę studentów</button>
+<button onclick="window.location.href='/form'">Dodaj nowego studenta</button>
+<button onclick="window.location.href='/search-page'">Wyszukaj Studenta</button>
+
+
+</body>
+</html>

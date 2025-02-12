@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edytuj Studenta</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .cancel-button {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Edytuj Studenta</h1>
+<div class="form-container">
+    <form th:action="@{/update}" method="post">
+        <input type="hidden" name="id" th:value="${student.id}">
+
+        <label for="firstName">Imię:</label>
+        <input type="text" id="firstName" name="firstName" th:value="${student.firstName}" required>
+
+        <label for="lastName">Nazwisko:</label>
+        <input type="text" id="lastName" name="lastName" th:value="${student.lastName}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" th:value="${student.email}" required>
+
+        <button type="submit" class="save-button">Zapisz</button>
+        <button type="button" class="cancel-button" onclick="window.location.href='/students'">Anuluj</button>
+    </form>
+</div>
+</body>
+</html>

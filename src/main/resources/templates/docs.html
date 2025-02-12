@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dokumentacja aplikacji</title>
+  <style>
+    table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+
+
+    button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+<h1>Dokumentacja aplikacji</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Endpoint</th>
+    <th>Metoda</th>
+    <th>Opis</th>
+    <th>Parametry</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><a href="/menu">/menu</a></td>
+    <td>GET</td>
+    <td>Wyświetla menu aplikacji</td>
+    <td>Brak</td>
+  </tr>
+  <tr>
+    <td><a href="/students">/students</a></td>
+    <td>GET</td>
+    <td>Wyświetla listę studentów</td>
+    <td>Brak</td>
+  </tr>
+  <tr>
+    <td><a href="/form">/form</a></td>
+    <td>GET</td>
+    <td>Wyświetla formularz dodawania studenta</td>
+    <td>Brak</td>
+  </tr>
+  <tr>
+    <td>/form</td>
+    <td>POST</td>
+    <td>Przesyła dane nowego studenta do bazy</td>
+    <td>
+      <ul>
+        <li><code>firstName</code> - Imię studenta</li>
+        <li><code>lastName</code> - Nazwisko studenta</li>
+        <li><code>email</code> - Email studenta</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="/search-page">/search-page</a></td>
+    <td>GET</td>
+    <td>Wyświetla stronę wyszukiwania studenta po ID</td>
+    <td>Brak</td>
+  </tr>
+  <tr>
+    <td>/search</td>
+    <td>GET</td>
+    <td>Wyszukuje studenta po ID</td>
+    <td>
+      <ul>
+        <li><code>id</code> - ID studenta</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>/delete</td>
+    <td>POST</td>
+    <td>Usuwa studenta po ID</td>
+    <td>
+      <ul>
+        <li><code>id</code> - ID studenta</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>/edit</td>
+    <td>GET</td>
+    <td>Wyświetla formularz edycji studenta</td>
+    <td>
+      <ul>
+        <li><code>id</code> - ID studenta</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>/update</td>
+    <td>POST</td>
+    <td>Aktualizuje dane studenta</td>
+    <td>
+      <ul>
+        <li><code>id</code> - ID studenta</li>
+        <li><code>firstName</code> - Imię</li>
+        <li><code>lastName</code> - Nazwisko</li>
+        <li><code>email</code> - Email</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<button onclick="window.location.href='/menu'">Powrót do menu</button>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Wyszukaj Studenta</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .cancel-button {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+    <script>
+        function showEditForm() {
+            document.getElementById("editForm").style.display = "block";
+        }
+
+        function hideEditForm() {
+            document.getElementById("editForm").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<h1>Wyszukaj Studenta</h1>
+
+<form th:action="@{/search}" method="get">
+    <label for="id">Wpisz ID:</label>
+    <input type="number" id="id" name="id" required>
+    <button type="submit">Szukaj</button>
+</form>
+
+
+<p th:if="${errorMessage != null}" th:text="${errorMessage}" class="error-message"></p>
+<p th:if="${successMessage != null}" th:text="${successMessage}" class="success-message"></p>
+
+
+<div th:if="${studentById != null}">
+    <h2>Wynik wyszukiwania:</h2>
+    <p><strong>ID:</strong> <span th:text="${studentById.id}"></span></p>
+    <p><strong>Imię:</strong> <span th:text="${studentById.firstName}"></span></p>
+    <p><strong>Nazwisko:</strong> <span th:text="${studentById.lastName}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${studentById.email}"></span></p>
+
+
+    <form th:action="@{/delete}" method="post" style="display:inline;">
+        <input type="hidden" name="id" th:value="${studentById.id}">
+        <button type="submit">Usuń</button>
+    </form>
+</div>
+
+
+<button onclick="window.location.href='/menu'">Powrót do menu</button>
+</body>
+</html>
+
